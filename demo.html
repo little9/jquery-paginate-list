@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jquery-paginate-list</title>
+    <script src="jquery-2.1.0.min.js"></script>
+    <script src="jquery.tinysort.min.js"></script>
+    <script src="jquery-paginate-list.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('.results').pagi(5);
+
+            $('.next').on('click', function () {
+                $('.results').pagiNext(5);
+            });
+
+            $('.previous').on('click', function () {
+                $('.results').pagiPrev(5);
+            });
+
+            $('.show-all').on('click', function() {
+                $('.results').showAll();
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <ul class="results">
+        <li class="result">Lorem ipsum dolor sit amet</li>
+        <li class="result">consectetur adipisicing elit</li>
+        <li class="result">sed do eiusmod tempor </li>
+        <li class="result">incididunt ut labore et dolore magna aliqua</li>
+        <li class="result"> Ut enim ad minim veniam</li>
+        <li class="result">quis nostrud exercitation ullamco laboris nisi ut</li>
+        <li class="result">ex ea commodo consequat</li>
+        <li class="result">Duis aute irure dolor in reprehenderit</li>
+        <li class="result">in voluptate velit esse cillum dolore</li>
+        <li class="result">eu fugiat nulla pariatur. </li>
+        <li class="result">Excepteur sint occaecat cupidatat non proident </li>
+        <li class="result">sunt in culpa qui officia deserunt mollit </li>
+        <li class="result">anim id est laborum.. </li>
+    </ul>
+
+    <button class="next">Next</button>
+    <button class="previous">Previous</button>
+    <button class="show-all">Show All</button>
+    <div class="pagi-controls"></div>
+</body>
+</html>
